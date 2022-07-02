@@ -85,8 +85,15 @@ int main() {
         duration=10;
     }
 
-    file_generator(fr,amp,duration);
+    fr=fr/16; //Freq of F0
+    for(int i=1;i<100;i++){
+        fr=fr*1.05946309436;
+        file_generator(fr,amp,duration);
+    }
+
+
 
     return 0;
 
 }
+
